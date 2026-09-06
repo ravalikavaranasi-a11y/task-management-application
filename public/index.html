@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="auth" class="auth">
+  <div class="authbox">
+
+    <h1>TaskFlow</h1>
+    <p>Organize your work. Get things done.</p>
+
+    <div class="tabs">
+      <button id="lt" class="active">Login</button>
+      <button id="rt">Register</button>
+    </div>
+
+    <form id="af">
+
+      <input
+        id="nm"
+        class="hide"
+        placeholder="Full name"
+      >
+
+      <input
+        id="em"
+        type="email"
+        placeholder="Email"
+        required
+      >
+
+      <input
+        id="pw"
+        type="password"
+        placeholder="Password"
+        required
+      >
+
+      <button class="primary">
+        Continue
+      </button>
+
+      <p id="am"></p>
+
+    </form>
+
+  </div>
+</div>
+
+
+<div id="app" class="hide">
+
+  <header>
+    <b>TaskFlow</b>
+
+    <span id="hi"></span>
+
+    <button id="logout">
+      Logout
+    </button>
+  </header>
+
+  <main>
+
+    <div class="top">
+
+      <div>
+        <small>MY WORKSPACE</small>
+        <h1>Tasks</h1>
+      </div>
+
+      <button id="new" class="primary">
+        + New Task
+      </button>
+
+    </div>
+
+    <div class="filters">
+
+      <button data-f="All" class="active">
+        All
+      </button>
+
+      <button data-f="Pending">
+        Pending
+      </button>
+
+      <button data-f="In Progress">
+        In Progress
+      </button>
+
+      <button data-f="Completed">
+        Completed
+      </button>
+
+    </div>
+
+    <div id="grid" class="grid"></div>
+
+  </main>
+
+</div>
+
+
+<div id="modal" class="modal hide">
+
+  <form id="tf" class="modalbox">
+
+    <h2 id="mt">
+      New Task
+    </h2>
+
+    <input
+      id="tid"
+      type="hidden"
+    >
+
+    <input
+      id="tt"
+      placeholder="Task title"
+      required
+    >
+
+    <textarea
+      id="td"
+      placeholder="Description"
+    ></textarea>
+
+    <div class="row">
+
+      <select id="ts">
+        <option>Pending</option>
+        <option>In Progress</option>
+        <option>Completed</option>
+      </select>
+
+      <select id="tp">
+        <option>Low</option>
+        <option selected>Medium</option>
+        <option>High</option>
+      </select>
+
+    </div>
+
+    <input
+      id="due"
+      type="date"
+    >
+
+    <div class="actions">
+
+      <button
+        type="button"
+        id="cancel"
+      >
+        Cancel
+      </button>
+
+      <button class="primary">
+        Save Task
+      </button>
+
+    </div>
+
+  </form>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
